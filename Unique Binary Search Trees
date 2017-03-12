@@ -1,0 +1,16 @@
+int numTrees(int n) {
+    vector<int> DP(n+1, 0);
+    if(n >= 1) DP[1] = 1;
+    if(n >= 2) DP[2] = 2;
+    for(int i = 3; i <= n; ++i) 
+    {
+        int res = 0;
+        for(int j = 2; j < i; j++) 
+        {
+            res += DP[j-1] * DP[i-j]; 
+        }
+        res += 2*DP[i-1];
+        DP[i] = res;
+    }
+    return DP[n];
+}

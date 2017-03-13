@@ -1,0 +1,30 @@
+def numDecodings(self, s):
+    if not s or s[0] == '0':
+        return 0
+    n = len(s)
+    if n == 1:
+        return 1 
+     
+    prev2 = 1
+    prev1 = 1
+    cur = 1
+    for i in xrange(1, n):
+        if s[i] == '0':
+            if s[i - 1] in '12':
+                cur = prev2
+            else:
+                return 0
+        elif s[i] in '123456':
+            if s[i - 1] in '12':
+                cur = prev1 + prev2
+            else:
+                cur = prev1
+        else:
+            if s[i - 1] == '1':
+                cur = prev1 + prev2
+            else:
+                cur = prev1
+        prev2 = prev1
+        prev1 = cur
+            
+    return cur

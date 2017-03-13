@@ -1,0 +1,20 @@
+def minimumTotal(self, triangle):
+    if len(triangle) == 0:
+        return 0
+            
+    lastMinSum = []
+    for row in triangle:
+        if len(row) == 1:
+            lastMinSum = row
+            continue
+        tempMinSum = []
+        for col, e in enumerate(row):
+            if col == 0:
+                tempMinSum.append( e + lastMinSum[0] )
+            elif col == len(row) - 1:
+                tempMinSum.append( e + lastMinSum[-1] )
+            else:
+                tempMinSum.append( e + min(lastMinSum[col - 1], lastMinSum[col]) )
+        lastMinSum = tempMinSum
+        
+    return min(lastMinSum)

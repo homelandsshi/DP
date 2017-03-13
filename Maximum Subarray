@@ -1,0 +1,14 @@
+def maxSubArray(self, nums):
+    if not nums:
+        return 0
+        
+    pre = nums[0]
+    result = pre
+        
+    for i in xrange(1, len(nums)):
+        cur = max(pre, 0) + nums[i] 
+        	# dp[i] = max(dp[i - 1], 0) + nums[i], dp[i] max subarray sum ending with i
+        result = max(result, cur)
+        pre = cur
+        
+    return result

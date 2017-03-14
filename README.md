@@ -4,6 +4,7 @@ The key for dp is to find the variables to represent the states and deduce the t
 
 I. f(n) ~ f(n - 1)
 - Maximum Subarray: https://leetcode.com/problems/maximum-subarray/?tab=Description 
+- Best Time to Buy and Sell Stock: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/#/description 
 - Triangle (Min path sum): https://leetcode.com/problems/triangle/#/description 
 
 II. f(n) ~ f(n - 1) & f(n - 2)
@@ -16,4 +17,7 @@ III. f(n) ~ somewhere before
 
 IV. loop -> recursive
 - Unique Binary Search Trees: https://leetcode.com/problems/unique-binary-search-trees/?tab=Description
+- Best Time to Buy and Sell Stock III: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/#/description 
 
+V. State analysis (graph)
+- Best Time to Buy and Sell Stock with Cooldown: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/#/description 

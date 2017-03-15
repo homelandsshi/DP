@@ -28,3 +28,4 @@ V. State analysis (graph)
 - Unique Paths: https://leetcode.com/problems/unique-paths/#/description
 - Unique Paths II: https://leetcode.com/problems/unique-paths-ii/#/description
 - Minimum Path Sum: https://leetcode.com/problems/minimum-path-sum/#/description
+- Maximal Square: https://leetcode.com/problems/maximal-square/#/description 
